@@ -53,9 +53,10 @@ Note: Unqualified names in the name table are strings. The context decides wheth
 a type-name or a term-name. The same string can represent both.
 
 
-Standard-Section: "ASTs" TopLevelStat*
+Standard-Section: "ASTs" Package*
 
-  TopLevelStat  = PACKAGE        Length Path TopLevelStat*                         -- package path { topLevelStats }
+  Package       = PACKAGE        Length Path TopLevelStat*                         -- package path { topLevelStats }
+  TopLevelStat  = Package
                   Stat
 
   Stat          = Term
